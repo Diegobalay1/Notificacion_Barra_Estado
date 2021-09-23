@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Notificacion Barra Estado</string>
+    <string name="channel_name">Nombre del Canal</string>
+    <string name="channel_description">Descripción del canal</string>
 </resources>
