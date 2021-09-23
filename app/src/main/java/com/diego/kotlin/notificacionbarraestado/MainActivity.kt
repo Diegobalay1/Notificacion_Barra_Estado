@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 
 class MainActivity : AppCompatActivity() {
     public val CHANNEL_ID = "channel_id"
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             val pendingIntent = PendingIntent.getActivity(this@MainActivity, 0, intent,
                                                                 PendingIntent.FLAG_UPDATE_CURRENT)
             builder.setContentIntent(pendingIntent)
+
+            val NOTIF_ID = 1
+            val notificationManager = NotificationManagerCompat.from(this@MainActivity)
+            notificationManager.notify(NOTIF_ID, builder.build())
 
         }
 
